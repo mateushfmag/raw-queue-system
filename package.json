@@ -11,7 +11,8 @@
     "migration:create": "knex migrate:make $npm_config_name -x ts --knexfile ./src/Config/knexfile.ts",
     "migration:latest": "knex migrate:latest --knexfile ./src/Config/knexfile.ts",
     "migration:rollback:all": "knex migrate:rollback --all --knexfile ./src/Config/knexfile.ts",
-    "migration:recreate": "npm run migration:rollback:all && npm run migration:latest"
+    "migration:recreate": "npm run migration:rollback:all && npm run migration:latest",
+    "seed": "knex seed:run"
   },
   "devDependencies": {
     "@sucrase/jest-plugin": "^3.0.0",
@@ -35,6 +36,6 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "knex": "^2.4.2",
-    "mssql": "^9.1.1"
+    "mysql": "^2.18.1"
   }
 }
